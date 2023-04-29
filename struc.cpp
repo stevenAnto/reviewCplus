@@ -20,5 +20,9 @@ double read_and_sum(int s){
   return sum;
 }
 int main(){
-  cout<<read_and_sum(5);
+  Vector* v= new Vector();
+  (*v).sz=4;
+  cout<<(*v).sz<<endl;
+  v->sz =5;
+  cout<<(*v).sz<<endl;
 }

@@ -1,24 +1,27 @@
 #include <iostream>
+
 using namespace std;
 
-int* copy(){
-  cout<<"entro"<<endl;
-  int v1[10]={0,1,2,3,4,5,6,7,8,9};
-  int *v2=new int[10];
-  for(auto i=0;i!=10;i++){
-    cout<<"entro for"<<endl;
-    cout<<*(v2+i)<<endl;
-    *(v2+i)=v1[i];
+int count_x(char* p, char x)
+{
+  if (p == nullptr) return 0;
+
+  int count = 0;
+  for (; p !=nullptr ; ++p) {
+    if (*p == x) {
+      ++count;
+    }
   }
-  cout<<"salio"<<endl;
-  return v2;
+
+  return count;
 }
-void print(int *vector,int n){
-  for(auto i=0;i!=n+2;i++){
-    cout<<vector[i]<<endl;
-  }
-}
-int main(){
-  int* vector = copy();
-  print(vector,10);
+
+int main() {
+  char my_array[] = "Hello world!";
+  char my_char = 'l';
+
+  int count = count_x(my_array, my_char);
+  cout << "The character '" << my_char << "' appears " << count << " times." << endl;
+
+  return 0;
 }

@@ -1,3 +1,5 @@
+#ifndef LINKED_h
+#define LINKED_h
 #include "Node.cpp"
 
 class LinkedList{
@@ -5,3 +7,4 @@ class LinkedList{
   public:
     LinkedList();
 };
+#endif

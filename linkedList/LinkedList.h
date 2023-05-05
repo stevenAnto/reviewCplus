@@ -3,8 +3,12 @@
 #include "Node.cpp"
 
 class LinkedList{
-  Node* head;
   public:
     LinkedList();
+    void insertNode(int);
+    void printList();
+    void deleteNode(int);
+  private:
+    Node* head;
 };
 #endif
